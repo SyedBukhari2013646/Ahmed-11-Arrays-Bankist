@@ -81,6 +81,14 @@ const displayMovements = function (movements) {
 displayMovements(account1.movements);
 console.log(containerMovements.innerHTML);
 
+const user = 'Steven Thomas Williams';
+const userName = user
+  .toLowerCase()
+  .split(' ')
+  .map(function () {
+    return nam;
+  });
+console.log(userName);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -97,7 +105,7 @@ console.log(containerMovements.innerHTML);
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];
 
-// //Slice() //Doesn't mutate
+//Slice() //Doesn't mutate
 // console.log(arr.slice(2));
 // console.log(arr.slice(2, 4));
 // console.log(arr.slice(-1));
@@ -124,7 +132,7 @@ console.log(containerMovements.innerHTML);
 // //join //Doesn't mutate
 // console.log(letters.join(' - '));
 
-// //New at()Method
+//New at()Method
 // console.log(arr.at(0));
 // console.log(arr.at(-1));
 // console.log(arr.at(-2));
@@ -194,9 +202,38 @@ TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
 GOOD LUCK 😀
 */
 
-const dogsJulia = [3, 5, 2, 12, 7];
-const dogsKate = [4, 1, 15, 8, 3];
+// const dogsJulia = [3, 5, 2, 12, 7];
+// const dogsKate = [4, 1, 15, 8, 3];
 
-const checkDogs = function(){
-  logicla operator anf all of them are dead becaus
-}
+// const newDogsJulia = dogsJulia.slice(1, -2);
+
+// const allDogs = newDogsJulia.concat(dogsKate);
+// console.log(allDogs);
+
+// allDogs.forEach(function (chk, i, arr) {
+//   if (chk > 5) {
+//     console.log(`Dog no ${i + 1} is an adult, and is ${chk} years old`);
+//   } else {
+//     console.log(`Dog no ${i + 1} is still a puppy🐶`);
+//   }
+// });
+
+/////////////////////////////////////////
+/////////////////Maps()//////////////////
+/////////////////////////////////////////
+
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// const euroToPkr = 327.51;
+
+// const movementPkr = movements.map(mov => mov * euroToPkr);
+
+// console.log(movementPkr);
+
+// const movementDescription = movements.map((mov, i) => {
+//   return `Movement no ${i + 1}: You ${
+//     mov > 0 ? 'deposite' : 'withdraw'
+//   } ${mov}rs`;
+// });
+
+// console.log(movementDescription);
