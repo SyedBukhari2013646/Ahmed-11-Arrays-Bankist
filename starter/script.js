@@ -753,11 +753,49 @@ TEST DATA:
 ///////////////////////////////////////
 // Non Destructive reverse() methods
 
-console.log(movements);
-// const reversedMovements = movements.slice().reverse();
-const reversedMovements = movements.toReversed();
-console.log(reversedMovements);
+// console.log(movements);
+// // const reversedMovements = movements.slice().reverse();
+// const reversedMovements = movements.toReversed();
+// console.log(reversedMovements);
 
-// toSorted() => sort &&& toSliced() => slice
-const mevementsNew = movements.with(1, 2000);
-console.log(mevementsNew);
+// // toSorted() => sort &&& toSliced() => slice
+// const mevementsNew = movements.with(1, 2000);
+// console.log(mevementsNew);
+
+///////////////////////////////////////
+// Array Methods Practice
+
+// 1.
+const bankDepositeSum = accounts
+  .flatMap(acc => acc.movements)
+  .filter(dep => dep > 0)
+  .reduce((sum, deposite) => sum + deposite, 0);
+
+console.log(bankDepositeSum);
+
+// 2.
+const numDeposite1000 = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, cur) => (cur >= 1000 ? ++acc : acc), 0);
+
+console.log(numDeposite1000);
+
+// ++ incrementaion (prefixed)
+let a = 10;
+console.log(a++);
+console.log(++a);
+console.log(a + 1);
+
+// 3.
+const { deposites, withdrawals } = accounts
+  .flatMap(acc => acc.movements)
+  .reduce(
+    (sum, cur) => {
+      // cur > 0 ? (sum.deposites += cur) : (sum.withdrawals += cur);
+      sum[cur > 0 ? 'deposites' : 'withdrawals'] += cur;
+      return sum;
+    },
+    { deposites: 0, withdrawals: 0 }
+  );
+
+console.log(deposites, withdrawals);
